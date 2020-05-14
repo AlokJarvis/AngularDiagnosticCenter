@@ -1,0 +1,36 @@
+<head>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    -->
+</head>
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Center Id</th>
+            <th>Center Name</th>
+            <th>Contact Number</th>
+            <th>Center Address</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let e of center">
+                <td> {{e.centerId}} </td>
+                <td> {{e.centerName}} </td>
+                <td> {{e.contactNo}} </td>
+                <td> {{e.centerAddress}}</td>
+                
+                <td>
+                    <button type="button" class="btn btn-large btn-block btn-primary" (click)="delete(e)">Delete</button>
+                </td>
+                
+                <td>
+            </tr>
+        </tbody>
+    </table>
+    <ng-template #elseBlock>
+        <h4 align="center"> There are no questions to display,please add the question! </h4>
+    </ng-template>
+
+</div>
+
